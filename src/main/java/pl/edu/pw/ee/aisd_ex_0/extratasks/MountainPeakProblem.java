@@ -25,8 +25,13 @@ Wyjście: 1
 */
 public class MountainPeakProblem {
 
-    public int peakIndexInMountainArray(int[] arr) {
-    	throw new UnsupportedOperationException("TODO peak problem");
+    public int peakProblem(int[] arr) {
+    	int peak = 0;
+        int current = 0;
+        while(current < arr.length){
+            if(arr[current] > arr[peak]) peak = current;
+            else current++;
+        }
+        return peak;
     }
-    
 }
